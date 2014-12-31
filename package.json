@@ -1,10 +1,18 @@
 {
-  "name": "orchestra-thrust",
+  "name": "orchestra",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "author": "Manuel Alabor <manuel@alabor.me>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swissmanu/orchestra"
+  },
+  "bugs": {
+    "url": "https://github.com/swissmanu/orchestra/issues"
+  },
+  "homepage": "https://github.com/swissmanu/orchestra",
   "dependencies": {
     "express": "^4.10.6",
     "node-thrust": "^0.7.6-rc.1",
