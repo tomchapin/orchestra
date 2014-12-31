@@ -1,0 +1,14 @@
+{
+  "name": "orchestra-thrust",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Manuel Alabor <manuel@alabor.me>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.6",
+    "node-thrust": "^0.7.6-rc.1",
+    "orchestra-api": "^0.0.1",
+    "orchestra-client": "^0.0.1"
+  }
+}
