@@ -3,8 +3,9 @@ var orchestraApi = require('orchestra-api')
 	, express = require('express')
 	, app = express();
 
-app.use('/api', orchestraApi);
 app.use('/', orchestraClient);
+app.use('/api', orchestraApi);
+
 app.listen(8080);
 
 /*
