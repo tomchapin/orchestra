@@ -1,6 +1,6 @@
 # Orchestra
 
-Crossplatform desktop application using [thrust](https://github.com/breach/thrust) to control Logitech Harmony Hubs.
+Crossplatform desktop application using [atom-shell](https://github.com/atom/atom-shell) to control Logitech Harmony Hubs.
 
 ## Modules
 

@@ -1,5 +1,6 @@
 {
   "name": "orchestra",
+  "productName": "Orchestra",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -14,8 +15,8 @@
   },
   "homepage": "https://github.com/swissmanu/orchestra",
   "dependencies": {
+    "atom-shell": "^1.2.1",
     "express": "^4.10.6",
-    "node-thrust": "^0.7.6-rc.1",
     "orchestra-api": "^0.0.1",
     "orchestra-client": "^0.0.1"
   }
