@@ -2,9 +2,9 @@ var orchestraApi = require('orchestra-api')
 	, orchestraClient = require('orchestra-client')
 	, app = require('express')();
 
-app.use('/', orchestraClient);
-app.use('/', orchestraApi);
-app.listen(8080, '127.0.0.1', function() {
+app.use(orchestraClient);
+app.use('/api', orchestraApi.restApi);
+orchestraApi.webSocketApi(app.listen(8080, '127.0.0.1', function() {
 	var app = require('app');  // Module to control application life.
 	var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
@@ -32,6 +32,4 @@ app.listen(8080, '127.0.0.1', function() {
 			mainWindow = null;
 		});
 	});
-	
-	
-});
+}));
