@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Orchestra</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link type="text/css" rel="stylesheet" href="node_modules/orchestra-client/build/styles/app.css">
+</head>
+<body>
+<p>Loading...</p>
+<script type="text/javascript">
+	if(process.platform === 'darwin') {
+		var manifest = require('./package.json')
+			, gui = require('nw.gui')
+			, menuBar = new gui.Menu({ type: 'menubar' });
+
+		menuBar.createMacBuiltin(manifest.window.title);
+		gui.Window.get().menu = menuBar;
+	}
+
+	// make react working:
+	global.document = window.document;
+	global.navigator = window.navigator;
+
+	// start the client:
+	require('./node_modules/orchestra-client/build/scripts/app');
+</script>
+</body>
+</html>

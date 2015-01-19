@@ -3,9 +3,12 @@
   "productName": "Orchestra",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "author": "Manuel Alabor <manuel@alabor.me>",
   "license": "MIT",
+  "main": "index.html",
+  "window": {
+    "title": "Orchestra"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/swissmanu/orchestra"
@@ -15,9 +18,7 @@
   },
   "homepage": "https://github.com/swissmanu/orchestra",
   "dependencies": {
-    "atom-shell": "^1.2.1",
-    "express": "^4.10.6",
-    "orchestra-api": "^0.0.1",
+    "orchestra-jsapi": "^0.0.1",
     "orchestra-client": "^0.0.1"
   }
 }
