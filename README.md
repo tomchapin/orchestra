@@ -1,5 +1,5 @@
 # Orchestra
-![Codeship](https://codeship.com/projects/60a7a940-81fd-0132-b737-2e1fa562aa85/status?branch=master)
+[![Build Status](https://travis-ci.org/swissmanu/orchestra.svg)](https://travis-ci.org/swissmanu/orchestra)
 
 Crossplatform desktop application using [nw.js](https://github.com/nwjs/nw.js) to control Logitech Harmony Hubs.
 
