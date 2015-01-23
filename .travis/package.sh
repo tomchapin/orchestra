@@ -1,5 +1,3 @@
 #!/bin/sh
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
-node $DIR/../lib/package.js
+node lib/package.js

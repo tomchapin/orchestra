@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "0.11.13"
 
-after_install: ./.travis/after_install.sh
-script: ./.travis/package.sh
+before_install: ./.travis/after_install.sh
+install: ./.travis/package.sh
