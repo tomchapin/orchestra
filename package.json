@@ -8,6 +8,7 @@
   "main": "index.html",
   "window": {
     "title": "Orchestra"
+    , "toolbar": false
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
     "orchestra-client": "^0.0.2"
   },
   "devDependencies": {
-    "node-webkit-builder": "^1.0.7"
+    "node-webkit-builder": "git://github.com/bambooCZ/node-webkit-builder.git#7cb9f94f9fd658f2f26763132b244e2ec16c143d"
   }
 }
