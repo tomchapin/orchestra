@@ -23,6 +23,6 @@
     "orchestra-client": "^0.0.2"
   },
   "devDependencies": {
-    "node-webkit-builder": "git://github.com/bambooCZ/node-webkit-builder.git#7cb9f94f9fd658f2f26763132b244e2ec16c143d"
+    "node-webkit-builder": "git://github.com/swissmanu/node-webkit-builder.git"
   }
 }
