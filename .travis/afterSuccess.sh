@@ -28,7 +28,7 @@ do
 	ZIP_FILE="$TARGET/$BUILD_NAME.zip"
 	echo "---- Create ZIP $ZIP_FILE ----"
 	(cd $BUILD_DIR && zip -r -q $ZIP_FILE ./* )
-	echo `date +%s` > timestamp
+	echo `date +%s` > $TARGET/timestamp
 done
 
 echo "---- Generate new index.html ----"
