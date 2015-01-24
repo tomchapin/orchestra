@@ -27,7 +27,7 @@ do
 	BUILD_NAME=`basename $BUILD_DIR`
 	ZIP_FILE="$TARGET/$BUILD_NAME.zip"
 	echo "---- Create ZIP $ZIP_FILE ----"
-	zip -r -q $ZIP_FILE $BUILD_DIR/*
+	(cd $BUILD_DIR && zip -r -q $ZIP_FILE ./* )
 done
 
 echo "---- Generate new index.html ----"
