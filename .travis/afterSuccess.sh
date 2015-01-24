@@ -31,7 +31,7 @@ do
 done
 
 echo "---- Generate new index.html ----"
-node $ORCHESTRA_BUILD/../../orchestra/lib/genereateBuildIndex.js
+node $ORCHESTRA_BUILD/../../../orchestra/lib/genereateBuildIndex.js
 
 echo '---- Set git settings ----'
 git config --global user.name $GIT_AUTHOR_NAME
