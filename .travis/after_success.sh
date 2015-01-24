@@ -14,7 +14,7 @@ echo '---- Create directory builds/$TRAVIS_COMMIT ----'
 mkdir -p builds/$TRAVIS_COMMIT
 
 echo '---- Copy build ----'
-cp $ORCHESTRA_BUILD ./$TRAVIS_COMMIT
+cp -r $ORCHESTRA_BUILD ./$TRAVIS_COMMIT
 
 echo '---- Set git settings ----'
 git config --global user.name $GIT_AUTHOR_NAME
