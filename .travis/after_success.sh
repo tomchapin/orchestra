@@ -9,12 +9,17 @@ echo '---- Checkout orchestra-builds/gh-pages ----'
 cd /tmp
 git clone --depth=1 --branch=gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} gh-pages 2>&1
 cd gh-pages
+TARGET =`pwd`
 
-echo '---- Create directory builds/$TRAVIS_COMMIT ----'
-mkdir -p builds/$TRAVIS_COMMIT
+echo "---- Create directory $TARGET ----"
+mkdir -p $TARGET
 
-echo '---- Copy build ----'
-cp -r $ORCHESTRA_BUILD ./$TRAVIS_COMMIT
+for file in $ORCHESTRA_BUILD/*
+do
+	ZIP_FILE="$TARGET/$file.zip"
+	echo "---- Create ZIP $ZIP_FILE ----"
+	zip -r -q $ZIP_FILE $ORCHESTRA_BUILD/$file/*
+done
 
 echo '---- Set git settings ----'
 git config --global user.name $GIT_AUTHOR_NAME
