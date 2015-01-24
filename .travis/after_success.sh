@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo '---------------------------'
+echo '       AFTER SUCCESS       '
+echo '           START           '
+echo '---------------------------'
+
 echo '---- Checkout orchestra-builds/gh-pages ----'
 cd /tmp
 git clone --depth=1 --branch=gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} gh-pages 2>&1
@@ -20,3 +25,8 @@ echo '---- Add files, commit and push ----'
 git add -A
 git commit -m "adding build for revision $TRAVIS_COMMIT"
 git push https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} 2>&1
+
+echo '---------------------------'
+echo '       AFTER SUCCESS       '
+echo '            END            '
+echo '---------------------------'

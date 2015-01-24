@@ -46,7 +46,7 @@ env:
 
     # CI_HOME
     # A shortcut to the directory where travis cloned the actual git repo
-    - CI_HOME=`pwd`/$TRAVIS_REPO_SLUG
+    - CI_HOME=`pwd`
 
     # RESULT_PDF_PATH
     # A shortcut to the built PDF document
