@@ -10,13 +10,13 @@ cd /tmp
 git clone --depth=1 --branch=gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} gh-pages 2>&1
 cd gh-pages
 
-if [ -z "$TRAVIS_TAG" ];
+if [ "x$TRAVIS_TAG" = "x" ]
 then
-	echo "---- Recognized Git Tag $TRAVIS_TAG ----"
-	TARGET=`pwd`/release/$TRAVIS_TAG
-else
 	echo "---- Recognized Git Revision $TRAVIS_COMMIT ----"
 	TARGET=`pwd`/unstable/$TRAVIS_COMMIT
+else
+	echo "---- Recognized Git Tag $TRAVIS_TAG ----"
+	TARGET=`pwd`/release/$TRAVIS_TAG
 fi
 
 echo "---- Create directory $TARGET ----"
