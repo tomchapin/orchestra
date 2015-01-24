@@ -5,7 +5,7 @@ echo '          PACKAGE          '
 echo '           START           '
 echo '---------------------------'
 
-node lib/package.js
+node lib/buildNodeWebkitApp.js
 
 echo '---------------------------'
 echo '          PACKAGE          '

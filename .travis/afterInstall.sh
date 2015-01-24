@@ -7,6 +7,7 @@ echo '---------------------------'
 
 # Prepare the client:
 echo '---- Prepare orchestra-client for nw.js ----'
+( cd node_modules/orchestra-client && npm install )
 ( cd node_modules/orchestra-client && node_modules/.bin/gulp clean prepare-node-webkit )
 
 # Rebuild native modules:

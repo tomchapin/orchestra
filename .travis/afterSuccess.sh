@@ -9,7 +9,15 @@ echo '---- Checkout orchestra-builds/gh-pages ----'
 cd /tmp
 git clone --depth=1 --branch=gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_USER_NAME}/${GH_PROJECT_NAME} gh-pages 2>&1
 cd gh-pages
-TARGET=`pwd`/$TRAVIS_COMMIT
+
+if [ -z "$TRAVIS_TAG" ];
+then
+	echo "---- Recognized Git Tag $TRAVIS_TAG ----"
+	TARGET=`pwd`/release/$TRAVIS_TAG
+else
+	echo "---- Recognized Git Revision $TRAVIS_COMMIT ----"
+	TARGET=`pwd`/unstable/$TRAVIS_COMMIT
+fi
 
 echo "---- Create directory $TARGET ----"
 mkdir -p $TARGET
@@ -21,6 +29,9 @@ do
 	echo "---- Create ZIP $ZIP_FILE ----"
 	zip -r -q $ZIP_FILE $BUILD_DIR/*
 done
+
+echo "---- Generate new index.html ----"
+node $ORCHESTRA_BUILD/../../orchestra/lib/genereateBuildIndex.js
 
 echo '---- Set git settings ----'
 git config --global user.name $GIT_AUTHOR_NAME

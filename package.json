@@ -7,8 +7,8 @@
   "license": "MIT",
   "main": "index.html",
   "window": {
-    "title": "Orchestra"
-    , "toolbar": false
+    "title": "Orchestra",
+    "toolbar": false
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "orchestra-client": "^0.0.2"
   },
   "devDependencies": {
+    "filesize": "^3.0.1",
+    "jade": "^1.9.1",
     "node-webkit-builder": "git://github.com/swissmanu/node-webkit-builder.git"
   }
 }

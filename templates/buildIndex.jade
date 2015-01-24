@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        title Orchestra
+        style(type='text/css')
+            | body { font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+            | table { width: 100%; }
+            | th { text-align: left; background-color: #BBB; color: #FFF; }
+            | th, td { padding: 2px 8px 2px 4px; }
+            | td { vertical-align: top; }
+            | td { width: 33%; white-space: nowrap; border-bottom: 1px solid #DDD; }
+            | ul { margin: 0; padding: 0; list-style: none; }
+            | .file .size { margin-left: 3px; color: #666; }
+    body
+        h1 Orchestra
+        each build in builds
+            h2= build.name
+            table(cellSpacing=0)
+                thead
+                    th Date
+                    th Version
+                    th Files
+                tbody
+                    each version in build.versions
+                        tr
+                            td= version.created
+                            td= version.name
+                            td
+                                ul
+                                    each file in version.files
+                                        li.file
+                                            a(href=file.path)= file.name
+                                            span.size= '(' + file.size + ')'
+
+

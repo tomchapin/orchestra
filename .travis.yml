@@ -3,10 +3,12 @@ node_js:
   - "0.11.13"
 
 script:
-  - ./.travis/after_install.sh
-  - ./.travis/package.sh
+  - ./.travis/afterInstall.sh
+  - ./.travis/buildNodeWebkitApp.sh
 
-after_success: ./.travis/after_success.sh
+after_success: ./.travis/afterSuccess.sh
+
+
 
 
 #
