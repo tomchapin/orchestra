@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/swissmanu/orchestra",
   "dependencies": {
-    "orchestra-client": "^0.0.2"
+    "orchestra-client": "^0.0.3"
   },
   "devDependencies": {
     "filesize": "^3.0.1",
