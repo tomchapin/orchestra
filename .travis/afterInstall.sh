@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo '---------------------------'
 echo '       AFTER INSTALL       '
@@ -14,7 +14,7 @@ echo "---- Prepare orchestra-client for nw.js ----"
 echo "---- Rebuild native node modules using nw-gyp for nw.js $NW_VERSION ----"
 npm install nw-gyp -g
 
-declare -a NATIVE_MODULE_PATHS=(
+NATIVE_MODULE_PATHS=(
 	'node_modules/orchestra-client/node_modules/orchestra-jsapi/node_modules/harmonyhubjs-client/node_modules/node-stringprep'
 	'node_modules/orchestra-client/node_modules/orchestra-jsapi/node_modules/harmonyhubjs-client/node_modules/node-xmpp-core/node_modules/ltx/node_modules/node-expat'
 	'node_modules/orchestra-client/node_modules/orchestra-jsapi/node_modules/harmonyhubjs-client/node_modules/node-xmpp-core/node_modules/node-stringprep'
