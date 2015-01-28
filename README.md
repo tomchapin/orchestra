@@ -3,6 +3,9 @@
 
 Crossplatform desktop application using [nw.js](https://github.com/nwjs/nw.js) to control Logitech Harmony Hubs.
 
+## Downloads
+Latest stable and unstable releases are available under [http://swissmanu.github.io/orchestra-builds/](http://swissmanu.github.io/orchestra-builds/).
+
 ## Modules
 
 * [orchestra-client](https://github.com/swissmanu/orchestra-client)
