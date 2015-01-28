@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/swissmanu/orchestra",
   "dependencies": {
-    "orchestra-jsapi": "^0.0.1",
     "orchestra-client": "^0.0.2"
   },
   "devDependencies": {
